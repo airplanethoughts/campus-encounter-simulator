@@ -43,6 +43,8 @@ Morning Library overlaps accounted for the largest share of the daily decline at
 
 The 15-minute change had an approximate 95% paired Monte Carlo interval of −29.26 to −27.94 percentage points. The decline persisted with a stricter definition. Requiring at least five total shared minutes lowered the estimate from 93.22% at baseline to 46.73% at a 15-minute delay. Those minutes may come from separate encounters.
 
+A robustness check varied each walk by up to two minutes and gave each planned dwell a 10% chance of being skipped. The drop from baseline to a 15-minute delay was about 27–29 percentage points across all four models. The rebound from +15 to +30 minutes shrank with skipped stops and disappeared in the point estimates when both changes were applied.
+
 The estimates describe the fictional routes, schedules, and encounter rules in the notebook. The intervals quantify sampling variation within that model. Estimating encounter rates on a real campus would require observed schedules and movement data.
 
 The matched-day design uses common random numbers. [Glasserman and Yao (1992), *Some Guidelines and Guarantees for Common Random Numbers*](https://business.columbia.edu/faculty/research/some-guidelines-and-guarantees-common-random-numbers)
