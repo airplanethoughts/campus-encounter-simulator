@@ -45,6 +45,8 @@ The 15-minute change had an approximate 95% paired Monte Carlo interval of −29
 
 A robustness check varied each walk by up to two minutes and gave each planned dwell a 10% chance of being skipped. The drop from baseline to a 15-minute delay was about 27–29 percentage points across all four models. The rebound from +15 to +30 minutes shrank with skipped stops and disappeared in the point estimates when both changes were applied.
 
+**Five consecutive minutes at one location.** Replaying the same 20,000 days across all 61 shifts, we found that both the initial decline and the later rebound persisted under this stricter rule. Estimated encounter rates were 90.82% at baseline, 43.86% at +15 minutes, and 58.88% at +30 minutes. The initial drop grew from 28.60 to 46.95 percentage points, and the rebound was 15.01 points. A gap or location change resets the five-minute count. This check uses the original walking times and stops.
+
 The estimates describe the fictional routes, schedules, and encounter rules in the notebook. The intervals quantify sampling variation within that model. Estimating encounter rates on a real campus would require observed schedules and movement data.
 
 The matched-day design uses common random numbers. [Glasserman and Yao (1992), *Some Guidelines and Guarantees for Common Random Numbers*](https://business.columbia.edu/faculty/research/some-guidelines-and-guarantees-common-random-numbers)
