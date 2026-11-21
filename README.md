@@ -10,16 +10,30 @@ Each point reuses the same 20,000 simulated days. Negative shifts start Person B
 
 ## Run locally
 
-From the repository folder, run these commands in a macOS or Linux terminal with Python 3 installed.
+From the repository folder, run these commands in a macOS or Linux terminal with Python 3.13 installed.
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install jupyterlab numpy matplotlib
+python -m pip install -r requirements.txt
 python -m jupyterlab campus_encounter_simulator.ipynb
 ```
 
 In JupyterLab, select the Python 3 kernel and choose **Kernel → Restart Kernel and Run All Cells**. The fixed random seed makes the simulation reproducible. The hand-checkable example tests both overlapping visits and visits that meet only at a time boundary.
+
+## Run the notebook check
+
+After activating the virtual environment above, run the same execution command used in GitHub Actions.
+
+```bash
+MPLBACKEND=Agg python -m nbconvert --to notebook --execute \
+  --ExecutePreprocessor.kernel_name=python3 \
+  --ExecutePreprocessor.timeout=240 \
+  --output-dir="$(mktemp -d)" \
+  campus_encounter_simulator.ipynb
+```
+
+The [Notebook check](.github/workflows/notebook.yml) installs the pinned dependencies on a fresh Ubuntu runner with Python 3.13. It runs on pushes and pull requests targeting `main` and can also be started from the repository’s **Actions** tab. A cell error or timeout fails the check. The executed copy goes to a temporary directory so the checked-in notebook stays intact.
 
 ## How the model works
 
